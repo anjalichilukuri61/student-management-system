@@ -1,0 +1,248 @@
+/* ================================
+   General Reset & Base Styles
+   ================================ */
+
+/* Remove default spacing from all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* box-sizing means padding won't make elements wider than expected */
+}
+
+/* Base styles for the whole page */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  /* font-family → sets the font. 'Segoe UI' is clean and modern */
+  background-color: #f0f2f5;
+  /* light grey background so white cards stand out */
+  color: #2d3748;
+  /* dark grey text — easier on eyes than pure black */
+}
+
+/* ================================
+   Header
+   ================================ */
+
+header {
+  background-color: #1a202c;
+  /* very dark background for the top bar */
+  color: white;
+  padding: 16px 32px;
+  /* padding: top-bottom left-right */
+  display: flex;
+  /* flexbox makes it easy to space items horizontally */
+  justify-content: space-between;
+  /* pushes logo to left, button to right */
+  align-items: center;
+  /* vertically centers the items */
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  /* 700 = bold */
+}
+
+/* ================================
+   Main Container
+   ================================ */
+
+.container {
+  max-width: 900px;
+  /* never wider than 900px — looks bad on very wide screens */
+  margin: 32px auto;
+  /* auto left-right margin centers the container */
+  padding: 0 24px;
+}
+
+/* ================================
+   Card (white box)
+   ================================ */
+
+.card {
+  background: white;
+  border-radius: 12px;
+  /* rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* subtle shadow: x-offset y-offset blur color */
+  overflow: hidden;
+  /* keeps table corners inside the rounded card */
+}
+
+/* ================================
+   Table
+   ================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* removes double borders between cells */
+}
+
+thead {
+  background-color: #f7fafc;
+  /* very light grey header row */
+}
+
+th {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* ALL CAPS for headers */
+  letter-spacing: 0.5px;
+  color: #718096;
+  /* muted grey color */
+  border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f4f8;
+  /* light line between rows */
+  font-size: 14px;
+}
+
+/* Remove bottom border from last row */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Light highlight when hovering over a row */
+tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  /* cursor:pointer shows hand icon on hover */
+  text-decoration: none;
+  /* removes underline from links */
+  border: none;
+  /* removes default button border */
+  transition: background-color 0.2s;
+  /* smooth color change on hover — 0.2s = fast */
+}
+
+/* Blue primary button */
+.btn-primary {
+  background-color: #4f46e5;
+  /* indigo/purple */
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #4338ca;
+  /* slightly darker on hover */
+}
+
+/* Small edit button */
+.btn-edit {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+.btn-edit:hover {
+  background-color: #bee3f8;
+}
+
+/* Small delete button */
+.btn-delete {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.btn-delete:hover {
+  background-color: #fed7d7;
+}
+
+/* ================================
+   Form Card
+   ================================ */
+
+.form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 500px;
+  /* form never gets too wide */
+  margin: 0 auto;
+  /* center the form card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #1a202c;
+}
+
+/* ================================
+   Form Inputs
+   ================================ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  /* label on top, input below */
+  gap: 6px;
+  /* space between label and input */
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.form-group input {
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  /* removes default blue outline */
+  transition: border-color 0.2s;
+}
+
+/* Highlight input border when clicked */
+.form-group input:focus {
+  border-color: #4f46e5;
+  /* purple border when typing */
+}
+
+/* ================================
+   Back Link
+   ================================ */
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #4f46e5;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
